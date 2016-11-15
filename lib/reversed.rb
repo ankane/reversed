@@ -6,7 +6,7 @@ module Reversed
   def self.lookup(ip)
     ip = ip.to_s
     unless ip.empty?
-      resolver = Net::DNS::Resolver.new(nameservers: ["8.8.8.8", "8.8.4.4"], retry: 3).search(ip)
+      resolver = Net::DNS::Resolver.new(retry: 3).search(ip)
       answer = resolver.answer.first || resolver.authority.first
       if answer
         hostname = answer.value.split(" ").first[0..-2]
