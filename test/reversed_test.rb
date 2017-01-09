@@ -2,9 +2,7 @@ require_relative "test_helper"
 
 class ReversedTest < Minitest::Test
   def test_google
-    result = Reversed.lookup("8.8.4.4")
-    assert_equal "google.com", result[:domain]
-    assert_equal "google-public-dns-b.google.com", result[:hostname]
+    assert_equal "google-public-dns-b.google.com", Reversed.lookup("8.8.4.4")
   end
 
   def test_nil
