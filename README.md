@@ -4,7 +4,7 @@
 
 ```ruby
 Reversed.lookup("8.8.4.4")
-# {:domain=>"google.com", :hostname=>"google-public-dns-b.google.com"}
+# "google-public-dns-b.google.com"
 ```
 
 Works with IPv4 and IPv6
