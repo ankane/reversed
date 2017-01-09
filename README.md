@@ -9,6 +9,11 @@ Reversed.lookup("8.8.4.4")
 
 Works with IPv4 and IPv6
 
+```ruby
+Reversed.lookup("2a03:2880:2110:df07:face:b00c::1")
+# "a.ns.facebook.com"
+```
+
 ## Installation
 
 Add this line to your application’s Gemfile:
