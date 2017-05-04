@@ -13,7 +13,9 @@ module Reversed
       begin
         resolver = Net::DNS::Resolver.new(options).search(ip)
         answer = resolver.answer.first || resolver.authority.first
-        answer.value.split(" ").first[0..-2] if answer
+        if answer && !answer.value.empty?
+          answer.value.split(" ").first[0..-2]
+        end
       rescue Net::DNS::Resolver::NoResponseError
         nil
       end
