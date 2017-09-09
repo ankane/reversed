@@ -18,6 +18,9 @@ module Reversed
         end
       rescue Net::DNS::Resolver::NoResponseError
         nil
+      rescue Errno::EAFNOSUPPORT
+        options[:use_tcp] = true
+        retry
       end
     end
   end
