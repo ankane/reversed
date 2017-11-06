@@ -20,6 +20,7 @@ module Reversed
         nil
       rescue Errno::EAFNOSUPPORT
         options[:use_tcp] = true
+        options[:tcp_timeout] = timeout
         retry
       end
     end
