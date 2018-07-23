@@ -28,6 +28,20 @@ And then execute:
 bundle
 ```
 
+## Reference
+
+Set timeout
+
+```ruby
+Reversed.lookup(ip, timeout: 3)
+```
+
+Set nameservers
+
+```ruby
+Reversed.lookup(ip, nameservers: ["8.8.8.8"])
+```
+
 ## History
 
 View the [changelog](https://github.com/ankane/reversed/blob/master/CHANGELOG.md)
