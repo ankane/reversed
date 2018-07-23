@@ -6,7 +6,7 @@ module Reversed
     ip = ip.to_s
     unless ip.empty?
       options = {
-        retry: 3,
+        retry_number: 3,
         udp_timeout: timeout
       }
       options[:nameservers] = nameservers if nameservers
