@@ -12,4 +12,10 @@ class ReversedTest < Minitest::Test
   def test_nil
     assert_nil Reversed.lookup(nil)
   end
+
+  def test_invalid_ip
+    assert_raises(ArgumentError) do
+      Reversed.lookup("google-public-dns-b.google.com")
+    end
+  end
 end

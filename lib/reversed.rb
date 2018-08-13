@@ -1,10 +1,18 @@
 require "reversed/version"
 require "net/dns"
+require "ipaddr"
 
 module Reversed
   def self.lookup(ip, timeout: 5, nameservers: nil)
     ip = ip.to_s
     unless ip.empty?
+      begin
+        # ensure valid ip
+        ip = IPAddr.new(ip).to_s
+      rescue IPAddr::InvalidAddressError
+        raise ArgumentError, "Invalid IP"
+      end
+
       options = {
         retry_number: 3,
         udp_timeout: timeout

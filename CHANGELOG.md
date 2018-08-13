@@ -1,6 +1,7 @@
 ## 0.2.2 [unreleased]
 
 - Added support for machines with IPv6 disabled
+- Raise `ArgumentError` for invalid IP
 
 ## 0.2.1
 
