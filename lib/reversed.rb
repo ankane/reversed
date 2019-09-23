@@ -8,7 +8,7 @@ module Reversed
     unless ip.empty?
       begin
         # ensure valid ip
-        ip = IPAddr.new(ip).to_s
+        ip = IPAddr.new(ip)
       rescue IPAddr::InvalidAddressError
         raise ArgumentError, "Invalid IP"
       end
@@ -19,7 +19,7 @@ module Reversed
       }
       options[:nameservers] = nameservers if nameservers
       begin
-        resolver = Net::DNS::Resolver.new(options).search(ip)
+        resolver = Net::DNS::Resolver.new(options).search(ip.to_string)
         answer = resolver.answer.first || resolver.authority.first
         if answer && !answer.value.empty?
           answer.value.split(" ").first[0..-2]
