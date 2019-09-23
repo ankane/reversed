@@ -11,6 +11,7 @@ class ReversedTest < Minitest::Test
 
   def test_ipv6
     assert_equal "dns.google", Reversed.lookup("2001:4860:4860::8888")
+    assert_equal "a.ns.facebook.com", Reversed.lookup("2a03:2880:2110:df07:face:b00c::1")
   end
 
   def test_nil
