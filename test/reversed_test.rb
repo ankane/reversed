@@ -9,6 +9,10 @@ class ReversedTest < Minitest::Test
     assert_equal "dns.google", Reversed.lookup("8.8.4.4", nameservers: ["8.8.8.8"])
   end
 
+  def test_ipv6
+    assert_equal "dns.google", Reversed.lookup("2001:4860:4860::8888")
+  end
+
   def test_nil
     assert_nil Reversed.lookup(nil)
   end
