@@ -14,6 +14,8 @@ Reversed.lookup("2a03:2880:2110:df07:face:b00c::1")
 # "a.ns.facebook.com"
 ```
 
+[![Build Status](https://travis-ci.org/ankane/reversed.svg?branch=master)](https://travis-ci.org/ankane/reversed)
+
 ## Installation
 
 Add this line to your application’s Gemfile:
