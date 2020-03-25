@@ -57,3 +57,11 @@ Everyone is encouraged to help improve this project. Here are a few ways you can
 - Write, clarify, or fix documentation
 - Suggest or add new features
 
+To get started with development:
+
+```sh
+git clone https://github.com/ankane/reversed.git
+cd reversed
+bundle install
+bundle exec rake test
+```
