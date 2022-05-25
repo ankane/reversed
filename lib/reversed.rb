@@ -1,6 +1,11 @@
-require "reversed/version"
+# dependencies
 require "net/dns"
+
+# stdlib
 require "ipaddr"
+
+# modules
+require "reversed/version"
 
 module Reversed
   def self.lookup(ip, timeout: 5, nameservers: nil)
