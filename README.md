@@ -21,7 +21,7 @@ Reversed.lookup("2a03:2880:2110:df07:face:b00c::1")
 Add this line to your application’s Gemfile:
 
 ```ruby
-gem 'reversed'
+gem "reversed"
 ```
 
 And then execute:
