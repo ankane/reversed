@@ -24,12 +24,6 @@ Add this line to your application’s Gemfile:
 gem "reversed"
 ```
 
-And then execute:
-
-```sh
-bundle
-```
-
 ## Reference
 
 Set timeout
@@ -41,7 +35,7 @@ Reversed.lookup(ip, timeout: 3)
 Set nameservers
 
 ```ruby
-Reversed.lookup(ip, nameservers: ["8.8.8.8"])
+Reversed.lookup(ip, nameservers: ["1.1.1.1"])
 ```
 
 ## History
