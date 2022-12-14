@@ -38,6 +38,12 @@ Set nameservers
 Reversed.lookup(ip, nameservers: ["1.1.1.1"])
 ```
 
+Disable SOA fallback (only check PTR record) [unreleased]
+
+```ruby
+Reversed.lookup(ip, fallback: false)
+```
+
 ## History
 
 View the [changelog](https://github.com/ankane/reversed/blob/master/CHANGELOG.md)

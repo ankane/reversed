@@ -8,7 +8,7 @@ require "ipaddr"
 require "reversed/version"
 
 module Reversed
-  def self.lookup(ip, timeout: 5, nameservers: nil)
+  def self.lookup(ip, timeout: 5, nameservers: nil, fallback: true)
     ip = ip.to_s
     unless ip.empty?
       begin
@@ -25,7 +25,10 @@ module Reversed
       options[:nameservers] = nameservers if nameservers
       begin
         resolver = Net::DNS::Resolver.new(options).search(ip.reverse, Net::DNS::PTR)
-        answer = resolver.answer.first || resolver.authority.first
+        answer = resolver.answer.first
+        if !answer && fallback
+          answer = resolver.authority.first
+        end
         if answer && !answer.value.empty?
           answer.value.split(" ").first[0..-2]
         end

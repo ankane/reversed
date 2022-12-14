@@ -1,3 +1,7 @@
+## 0.4.1 (unreleased)
+
+- Added `fallback` option
+
 ## 0.4.0 (2022-06-12)
 
 - Dropped support for Ruby < 2.7
