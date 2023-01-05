@@ -42,3 +42,10 @@ module Reversed
     end
   end
 end
+
+# fix for https://github.com/bluemonk/net-dns/issues/82
+# need to define rather than rescue NameError
+# to allow for multiple nameservers to be checked
+# define here rather than for duration of search method for thread-safety
+# apply to all Ruby versions to fix deprecation warnings
+Net::DNS::Resolver::TimeoutError = Timeout::Error

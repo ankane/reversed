@@ -1,3 +1,7 @@
+## 0.4.2 (unreleased)
+
+- Fixed error with timeout with Ruby 3.1+
+
 ## 0.4.1 (2022-12-28)
 
 - Added `fallback` option

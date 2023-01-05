@@ -9,6 +9,10 @@ class ReversedTest < Minitest::Test
     assert_equal "dns.google", Reversed.lookup("8.8.4.4", nameservers: ["8.8.8.8"])
   end
 
+  def test_timeout
+    assert_nil Reversed.lookup("8.8.4.4", timeout: 0.0001)
+  end
+
   def test_fallback
     assert_equal "darl.ns.cloudflare.com", Reversed.lookup("103.21.244.0")
     assert_nil Reversed.lookup("103.21.244.0", fallback: false)
