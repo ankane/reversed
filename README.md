@@ -38,7 +38,7 @@ Set nameservers
 Reversed.lookup(ip, nameservers: ["1.1.1.1"])
 ```
 
-Disable SOA fallback (only check PTR record) [unreleased]
+Disable SOA fallback (only check PTR record)
 
 ```ruby
 Reversed.lookup(ip, fallback: false)
