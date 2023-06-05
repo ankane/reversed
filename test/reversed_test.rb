@@ -19,7 +19,7 @@ class ReversedTest < Minitest::Test
   end
 
   def test_ipv6
-    assert_equal "dns.google", Reversed.lookup("2001:4860:4860::8888")
+    assert_equal "one.one.one.one", Reversed.lookup("2606:4700:4700::1111")
     # returns nil on CI
     assert_equal "a.ns.facebook.com", Reversed.lookup("2a03:2880:2110:df07:face:b00c::1") unless ENV["CI"]
   end
