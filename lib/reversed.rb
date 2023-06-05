@@ -5,7 +5,7 @@ require "net/dns"
 require "ipaddr"
 
 # modules
-require "reversed/version"
+require_relative "reversed/version"
 
 module Reversed
   def self.lookup(ip, timeout: 5, nameservers: nil, fallback: true)
