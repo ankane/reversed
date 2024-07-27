@@ -14,7 +14,7 @@ Reversed.lookup("2a03:2880:2110:df07:face:b00c::1")
 # "a.ns.facebook.com"
 ```
 
-[![Build Status](https://github.com/ankane/reversed/workflows/build/badge.svg?branch=master)](https://github.com/ankane/reversed/actions)
+[![Build Status](https://github.com/ankane/reversed/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/reversed/actions)
 
 ## Installation
 
