@@ -1,3 +1,7 @@
+## 0.5.0 (unreleased)
+
+- Dropped support for Ruby < 3.1
+
 ## 0.4.2 (2023-01-10)
 
 - Fixed error with timeout with Ruby 3.1+
