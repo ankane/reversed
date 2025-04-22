@@ -10,7 +10,7 @@ class ReversedTest < Minitest::Test
   end
 
   def test_timeout
-    assert_nil Reversed.lookup("8.8.4.4", timeout: 0.0001)
+    assert_nil Reversed.lookup("10.255.255.1", timeout: 0.0001)
   end
 
   def test_fallback
